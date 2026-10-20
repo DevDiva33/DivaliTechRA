@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Requerimientos 1 y 3: Metadatos e Idioma Espanol -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal web de soporte tecnico y asistencia para DivaliTech.">
+    <meta name="keywords" content="DivaliTech, soporte tecnico, asistencia, costos, mapa, ayuda">
+    <title>Portal de Soporte Tecnico - DivaliTech</title>
+    
+    <!-- Enlace a la hoja de estilos externa dentro de /css -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado principal (<header>) -->
+    <header class="encabezado">
+        <h1>DivaliTech - Portal de Soporte Tecnico</h1>
+        <p><em>Soluciones tecnologicas e infraestructura al alcance de tu organizacion</em></p>
+    </header>
+
+    <!-- Menu de navegacion (<nav>) -->
+    <nav class="navegacion">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios y Costos</a></li>
+            <li><a href="#ubicacion">Ubicacion</a></li>
+            <li><a href="#asistencia">Solicitar Asistencia</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal (<main>) -->
+    <main class="contenido-principal">
+
+        <!-- Seccion de Inicio -->
+        <section id="inicio" class="seccion-caja">
+            <h2>Bienvenido al Centro de Soporte</h2>
+            <p>En <strong>DivaliTech</strong> ofrecemos atencion tecnica especializada para mantener tus sistemas y redes operando sin interrupciones.</p>
+            <p><mark>Horario de Atencion:</mark> Lunes a Viernes de 08:00 a 18:00 hrs. | Sabados de 09:00 a 14:00 hrs.</p>
+            
+            <div class="contenedor-imagen">
+                <img src="img/local.png" alt="Instalaciones del centro de soporte DivaliTech" class="imagen-local">
+            </div>
+        </section>
+
+        <!-- Seccion de Servicios y Tabla de Costos -->
+        <section id="servicios" class="seccion-caja">
+            <h2>Servicios Disponibles y Tarifas</h2>
+            <p>Consulta el catalogo de servicios de soporte tecnico presencial y remoto:</p>
+
+            <div class="tabla-contenedor">
+                <table class="tabla-servicios">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Descripcion</th>
+                            <th>Tiempo Estimado</th>
+                            <th>Costo Fijo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Soporte Tecnico Informatico</strong></td>
+                            <td>Diagnostico y mantenimiento correctivo/preventivo.</td>
+                            <td>1 a 2 horas</td>
+                            <td>$350 MXN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desarrollo y Ajustes Web</strong></td>
+                            <td>Mantenimiento de sitios web institucionales.</td>
+                            <td>2 a 4 horas</td>
+                            <td>$500 MXN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mantenimiento de Redes</strong></td>
+                            <td>Configuracion de routers, cableado y Wi-Fi.</td>
+                            <td>2 a 3 horas</td>
+                            <td>$450 MXN</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Seguridad y Resguardo</strong></td>
+                            <td>Auditoria de antivirus y respaldos de informacion.</td>
+                            <td>1 a 3 horas</td>
+                            <td>$400 MXN</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Seccion de Objeto Embebido (Mapa de Ubicacion) -->
+        <section id="ubicacion" class="seccion-caja">
+            <h2>Nuestra Ubicacion</h2>
+            <p>Visita nuestras oficinas centrales o ubica nuestro centro de servicio presencial:</p>
+            <p><strong>Direccion:</strong> Av. De la Innovacion #4500, Edificio Tecnologico, Piso 3.</p>
+            
+            <div class="mapa-contenedor">
+                <!-- Objeto embebido (Iframe de Google Maps) -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108573.43577717013!2d-106.48809115!3d31.67069355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75c8710bb8211%3A0x8633e72eb0498db2!2sCiudad%20Ju%C3%A1rez%2C%20Chih.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Seccion de Formulario de Solicitud de Asistencia -->
+        <section id="asistencia" class="seccion-caja">
+            <h2>Registrar Solicitud de Asistencia</h2>
+            <p>Completa el siguiente formulario para registrar tu ticket de soporte tecnico:</p>
+
+            <form id="form-soporte" novalidate>
+                <div class="campo">
+                    <label for="nombre">Nombre completo:*</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Perez Corral" required>
+                    <small class="mensaje-error" id="error-nombre"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electronico:*</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    <small class="mensaje-error" id="error-correo"></small>
+                </div>
+
+                <div class="campo">
+                    <label for="telefono">Telefono de contacto:*</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="656-123-4567" required>
+                    <small class="mensaje-error" id="error-telefono"></small>
+                </div>
+
+                <div class="campo campo-ancho">
+                    <label for="descripcion">Descripcion del problema:*</label>
+                    <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe brevemente la falla o servicio que requieres..." maxlength="250" required></textarea>
+                    <div class="contador-caracteres">
+                        <span id="contador">0</span> / 250 caracteres
+                    </div>
+                    <small class="mensaje-error" id="error-descripcion"></small>
+                </div>
+
+                <div class="campo campo-ancho">
+                    <button type="submit" class="boton-enviar">Enviar Solicitud de Asistencia</button>
+                </div>
+            </form>
+
+            <div id="mensaje-exito" class="mensaje-exito oculto"></div>
+        </section>
+
+    </main>
+
+    <!-- Pie de pagina (<footer>) -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 DivaliTech - Portal de Soporte Tecnico. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Enlace al script de JavaScript dentro de /js -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>2
